@@ -21,9 +21,12 @@ app.post('/contact', async (req, res) => {
         return res.status(400).json({ status: 'error', message: 'Por favor, completa los campos requeridos (Nombre, Email y Mensaje).' });
     }
 
-    // Configuración de Nodemailer con Gmail
+    // Configuración de Nodemailer con Gmail usando el puerto 587 (STARTTLS)
+    // Esto es necesario para despliegues en servidores como Render que bloquean el puerto 465 (SSL directo).
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false, // false para usar STARTTLS sobre el puerto 587
         auth: {
             user: 'ventas.chocolatesuper@gmail.com',
             pass: 'kteccbptofmlugbn' // Contraseña de aplicación de 16 letras

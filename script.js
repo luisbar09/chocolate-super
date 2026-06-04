@@ -33,6 +33,19 @@ function initNavbar() {
 function initRevealAnimations() {
     const revealElements = document.querySelectorAll('.reveal');
     
+    // Si no está soportado el IntersectionObserver, mostramos todo inmediatamente
+    if (!('IntersectionObserver' in window)) {
+        revealElements.forEach(el => {
+            el.classList.add('active');
+            const items = el.querySelectorAll('.producto-card, .precio-item, .distribucion-card, .feature-item');
+            items.forEach(item => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            });
+        });
+        return;
+    }
+    
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -45,17 +58,17 @@ function initRevealAnimations() {
                         setTimeout(() => {
                             item.style.opacity = '1';
                             item.style.transform = 'translateY(0)';
-                        }, index * 150); // 150ms entre cada item
+                        }, index * 100); // 100ms entre cada item para mayor dinamismo
                     });
                 }
                 
-                // Dejar de observar una vez revelado si se desea persistencia
-                // revealObserver.unobserve(entry.target);
+                // Dejar de observar una vez revelado para evitar ejecuciones repetidas
+                revealObserver.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15, // Se activa cuando el 15% del elemento es visible
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.02, // Se activa con el 2% de visibilidad para asegurar que responda en móviles con secciones muy altas
+        rootMargin: '0px 0px -20px 0px' // Menos margen inferior para pantallas de menor altura
     });
 
     revealElements.forEach(el => {
