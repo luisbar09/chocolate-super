@@ -1730,13 +1730,33 @@ a {
         font-size: 1rem;
     }
 
-    /* Las etiquetas flotantes se ocultan para no saturar pantallas pequeñas */
+    /* Etiquetas flotantes visibles pero más pequeñas en el celular */
     .hero-float-tag {
-        display: none;
+        padding: 0.5rem 0.8rem;
+        border-radius: 14px;
+    }
+
+    .hero-float-tag strong {
+        font-size: 1.1rem;
+    }
+
+    .hero-float-tag span {
+        font-size: 0.6rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-float-tag--1 {
+        top: 6%;
+        left: -6px;
+    }
+
+    .hero-float-tag--2 {
+        bottom: 8%;
+        right: -6px;
     }
 
     .hero-product-card {
-        max-width: 240px;
+        max-width: 250px;
         padding: 1.5rem;
     }
 
