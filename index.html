@@ -6,26 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chocolate Super | Chocolate Artesanal 100% Salvadoreño</title>
     <meta name="description"
-        content="Chocolate Super: Chocolate artesanal premium 100% salvadoreño. Calidad superior en cada tablilla para disfrutar de la mejor bebida de chocolate.">
+        content="Chocolate Super: Chocolate artesanal premium 100% salvadoreño desde 1997. Tablillas para preparar la mejor bebida de chocolate. Pide por WhatsApp o correo.">
+    <meta name="theme-color" content="#2b160b">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chocolate Super | Chocolate Artesanal Salvadoreño">
+    <meta property="og:description" content="La tradición del auténtico chocolate salvadoreño desde 1997. Pide por WhatsApp.">
+    <meta property="og:type" content="website">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
+    <!-- Barra de progreso de scroll -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <div class="logo">
+            <a href="#inicio" class="logo">
                 <h1>CHOCOLATE SUPER</h1>
                 <p class="tagline">100% Salvadoreño</p>
-            </div>
-            <button class="menu-toggle" id="menuToggle">
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -33,9 +40,18 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                <li><a href="#productos">Productos y Precios</a></li>
+                <li><a href="#productos">Productos</a></li>
                 <li><a href="#distribucion">Distribución</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li class="nav-cta-item">
+                    <a href="https://wa.me/50379239695?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20Chocolate%20Super"
+                        class="nav-cta" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" />
+                        </svg>
+                        Pedir ahora
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -44,21 +60,70 @@
     <section class="hero" id="inicio">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title">CHOCOLATE SUPER</h1>
-            <p class="hero-subtitle">Mezcla para Preparar Bebida de Chocolate en Tabletas</p>
-            <p class="hero-description">La tradición del auténtico chocolate salvadoreño, elaborada artesanalmente para
-                brindar momentos únicos de sabor y calidad en cada taza.</p>
-            <div class="hero-buttons">
-                <a href="#productos" class="btn btn-primary">Ver Productos</a>
-                <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
+            <div class="hero-text">
+                <span class="hero-badge">
+                    <span class="badge-dot"></span> Desde 1997 · Tradición Salvadoreña
+                </span>
+                <h1 class="hero-title">El Auténtico<br><span class="hero-title-accent">Chocolate Super</span></h1>
+                <p class="hero-subtitle">Mezcla artesanal en tablillas para preparar la bebida de chocolate más deliciosa.</p>
+                <p class="hero-description">Elaborado a mano con el sabor y la tradición de El Salvador, para brindar
+                    momentos únicos de calidez y sabor en cada taza.</p>
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn btn-primary">Ver Productos</a>
+                    <a href="https://wa.me/50379239695?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20Chocolate%20Super"
+                        class="btn btn-wa" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" />
+                        </svg>
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-product-card">
+                    <img src="img/super-grande.webp" alt="Tablilla de Chocolate Super" loading="eager">
+                    <div class="hero-float-tag hero-float-tag--1">
+                        <strong>100%</strong>
+                        <span>Artesanal</span>
+                    </div>
+                    <div class="hero-float-tag hero-float-tag--2">
+                        <strong>+27</strong>
+                        <span>Años de sabor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#quienes-somos" class="scroll-indicator" aria-label="Desplazarse hacia abajo">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- Barra de confianza -->
+    <section class="stats-bar" aria-label="Datos de la empresa">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">1997</span>
+                <span class="stat-label">Año de fundación</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Salvadoreño</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7</span>
+                <span class="stat-label">Presentaciones</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">🇸🇻</span>
+                <span class="stat-label">Hecho a mano</span>
             </div>
         </div>
     </section>
 
     <!-- Quiénes Somos -->
     <section class="quienes-somos reveal" id="quienes-somos">
-
         <div class="container">
+            <span class="section-eyebrow">Nuestra Historia</span>
             <h2 class="section-title">Quiénes Somos</h2>
             <div class="quienes-content">
                 <div class="quienes-text">
@@ -73,17 +138,15 @@
                     <p>Los inicios no fueron fáciles. Hubo retos, sacrificios y momentos de incertidumbre. Pero nunca
                         estuvieron solos. Sus cuatro hijos crecieron siendo parte del esfuerzo, aprendiendo desde
                         pequeños el valor del trabajo, la perseverancia y el amor por lo que se hace.</p>
-
                     <p>Con el paso del tiempo, ese pequeño sueño familiar se convirtió en una empresa sólida. Chocolate
                         Súper logró abrirse camino en el mercado, llegando a formar parte de importantes cadenas como
                         Walmart y expandiéndose incluso más allá de las fronteras, llevando un pedacito de El Salvador a
                         otros países.</p>
-
                     <p>Hoy, ese legado continúa vivo. Cada tablilla de Chocolate Súper representa una historia de
                         esfuerzo, una tradición familiar y el compromiso de seguir ofreciendo un producto con el mismo
                         cariño y calidad con el que todo comenzó.</p>
-
-                    <p>Chocolate Súper no solo es chocolate… es historia, es familia, es El Salvador.</p>
+                    <p class="quienes-closing">Chocolate Súper no solo es chocolate… es historia, es familia, es El
+                        Salvador.</p>
                     <div class="features">
                         <div class="feature-item">
                             <span class="feature-icon">✓</span>
@@ -101,6 +164,10 @@
                 </div>
                 <div class="quienes-image">
                     <img src="img/foto_profesional.png" alt="Los fundadores de Chocolate Super en su taller artesanal">
+                    <div class="quienes-image-badge">
+                        <strong>Familia Medina Robles</strong>
+                        <span>Fundadores</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,129 +175,206 @@
 
     <!-- Productos -->
     <section class="productos reveal" id="productos">
-
         <div class="container">
+            <span class="section-eyebrow">Nuestro Catálogo</span>
             <h2 class="section-title">Nuestros Productos</h2>
             <p class="section-subtitle">El sabor auténtico de El Salvador en cada presentación</p>
+
             <div class="product-notes">
                 <p class="iva-note">* Todos los precios mostrados no incluyen IVA</p>
                 <p class="volume-note">Ofrecemos atenciones especiales y precios preferenciales para pedidos de mayor
                     volumen. Consúltanos con confianza.</p>
-                <div class="productos-grid">
-                    <!-- Producto 1 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/super-pequeno.webp" alt="Chocolate Super Pequeño" class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Pequeño</h3>
-                            <p>Formato compacto de alta rotación, ideal para puntos de pago y venta impulsiva en
-                                comercios de conveniencia.</p>
-                            <p class="producto-precio">$0.25</p>
-                            <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Pequeño"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+            </div>
+
+            <!-- Filtros -->
+            <div class="product-filters" id="productFilters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="clasico">Clásico</button>
+                <button class="filter-btn" data-filter="leche">Con Leche</button>
+                <button class="filter-btn" data-filter="mayoreo">Mayoreo</button>
+            </div>
+
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card" data-category="clasico">
+                    <div class="producto-image">
+                        <img src="img/super-pequeno.webp" alt="Chocolate Super Pequeño" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Pequeño</h3>
+                        <p>Formato compacto de alta rotación, ideal para puntos de pago y venta impulsiva en
+                            comercios de conveniencia.</p>
+                        <p class="producto-precio">$0.25</p>
+                        <div class="producto-actions">
+                            <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Peque%C3%B1o"
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Peque%C3%B1o&body=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Peque%C3%B1o."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Producto 2 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/super-mediano.webp" alt="Chocolate Super Mediano" class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Mediano</h3>
-                            <p>Nuestra presentación estándar para retail. Equilibrio perfecto entre volumen y precio con
-                                gran aceptación en estanterías.</p>
-                            <p class="producto-precio">$0.55</p>
+                <!-- Producto 2 -->
+                <div class="producto-card" data-category="clasico">
+                    <div class="producto-image">
+                        <img src="img/super-mediano.webp" alt="Chocolate Super Mediano" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Mediano</h3>
+                        <p>Nuestra presentación estándar para retail. Equilibrio perfecto entre volumen y precio con
+                            gran aceptación en estanterías.</p>
+                        <p class="producto-precio">$0.55</p>
+                        <div class="producto-actions">
                             <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Mediano"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Mediano&body=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Mediano."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Producto 3 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/super-grande.webp" alt="Chocolate Super Grande" class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Grande</h3>
-                            <p>Formato premium diseñado para captar al cliente frecuente. Calidad artesanal superior que
-                                garantiza lealtad a la marca.</p>
-                            <p class="producto-precio">$1.00</p>
+                <!-- Producto 3 -->
+                <div class="producto-card" data-category="clasico">
+                    <span class="producto-badge badge-best">★ Más vendido</span>
+                    <div class="producto-image">
+                        <img src="img/super-grande.webp" alt="Chocolate Super Grande" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Grande</h3>
+                        <p>Formato premium diseñado para captar al cliente frecuente. Calidad artesanal superior que
+                            garantiza lealtad a la marca.</p>
+                        <p class="producto-precio">$1.00</p>
+                        <div class="producto-actions">
                             <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Grande"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Grande&body=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Grande."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Producto 4 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/super-jumbo.webp" alt="Chocolate Super Jumbo" class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Jumbo</h3>
-                            <p>Muestra de gran formato ideal para clientes de alto consumo o uso institucional en
-                                negocios de hostelería.</p>
-                            <p class="producto-precio">$1.20</p>
+                <!-- Producto 4 -->
+                <div class="producto-card" data-category="clasico">
+                    <div class="producto-image">
+                        <img src="img/super-jumbo.webp" alt="Chocolate Super Jumbo" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Jumbo</h3>
+                        <p>Muestra de gran formato ideal para clientes de alto consumo o uso institucional en
+                            negocios de hostelería.</p>
+                        <p class="producto-precio">$1.20</p>
+                        <div class="producto-actions">
                             <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Jumbo"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Jumbo&body=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Jumbo."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Producto 5 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/mediano-leche.webp" alt="Chocolate Super Mediano con Leche"
-                                class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Mediano con Leche</h3>
-                            <p>Variedad gourmet cremosa, perfecta para diversificar su oferta de productos lácteos y
-                                captar paladares que buscan suavidad.</p>
-                            <p class="producto-precio">$0.55</p>
+                <!-- Producto 5 -->
+                <div class="producto-card" data-category="leche">
+                    <span class="producto-badge badge-milk">Cremoso</span>
+                    <div class="producto-image">
+                        <img src="img/mediano-leche.webp" alt="Chocolate Super Mediano con Leche" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Mediano con Leche</h3>
+                        <p>Variedad gourmet cremosa, perfecta para diversificar su oferta de productos lácteos y
+                            captar paladares que buscan suavidad.</p>
+                        <p class="producto-precio">$0.55</p>
+                        <div class="producto-actions">
                             <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Mediano%20con%20Leche"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Mediano%20con%20Leche&body=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Mediano%20con%20Leche."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Producto 6 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/grande-leche.webp" alt="Chocolate Super Grande con Leche" class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Grande con Leche</h3>
-                            <p>Liderazgo en la categoría de chocolates cremosos. Un producto diferenciado con excelente
-                                margen de utilidad para el distribuidor.</p>
-                            <p class="producto-precio">$1.20</p>
+                <!-- Producto 6 -->
+                <div class="producto-card" data-category="leche">
+                    <span class="producto-badge badge-milk">Cremoso</span>
+                    <div class="producto-image">
+                        <img src="img/grande-leche.webp" alt="Chocolate Super Grande con Leche" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Grande con Leche</h3>
+                        <p>Liderazgo en la categoría de chocolates cremosos. Un producto diferenciado con excelente
+                            margen de utilidad para el distribuidor.</p>
+                        <p class="producto-precio">$1.20</p>
+                        <div class="producto-actions">
                             <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Grande%20con%20Leche"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Grande%20con%20Leche&body=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Grande%20con%20Leche."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Producto 7 -->
-                    <div class="producto-card">
-                        <div class="producto-image">
-                            <img src="img/super-bolsa.webp" alt="Chocolate Super Bolsa" class="img-producto" loading="lazy">
-                        </div>
-                        <div class="producto-info">
-                            <h3>Chocolate Super Bolsa (10 unidades)</h3>
-                            <p>Formato de distribución mayorista por excelencia. Optimizado para maximizar rentabilidad
-                                en ventas por volumen y reventa regional.</p>
-                            <p class="producto-precio">$0.95</p>
+                <!-- Producto 7 -->
+                <div class="producto-card" data-category="mayoreo">
+                    <span class="producto-badge badge-bulk">Mayoreo</span>
+                    <div class="producto-image">
+                        <img src="img/super-bolsa.webp" alt="Chocolate Super Bolsa" class="img-producto" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Chocolate Super Bolsa (10 unidades)</h3>
+                        <p>Formato de distribución mayorista por excelencia. Optimizado para maximizar rentabilidad
+                            en ventas por volumen y reventa regional.</p>
+                        <p class="producto-precio">$0.95</p>
+                        <div class="producto-actions">
                             <a href="https://wa.me/50379239695?text=Hola,%20me%20interesa%20el%20Chocolate%20Super%20Bolsa%20(10%20unidades)"
-                                class="btn btn-primary">Comprar por WhatsApp</a>
+                                class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Pedido%20Chocolate%20Super%20Bolsa&body=Hola,%20me%20interesa%20la%20Bolsa%20de%20Chocolate%20Super%20(10%20unidades)."
+                                class="btn btn-ghost btn-sm" aria-label="Pedir por correo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-
 
     <!-- Distribución -->
     <section class="distribucion reveal" id="distribucion">
         <div class="container">
-            <header style="text-align: center; margin-bottom: 5rem;">
+            <header style="text-align: center;">
+                <span class="section-eyebrow">Cómo Llegamos a Ti</span>
                 <h2 class="section-title">Distribución</h2>
                 <p class="section-subtitle">Llevamos la tradición hasta tu puerta</p>
             </header>
@@ -287,8 +431,7 @@
             <div class="cobertura">
                 <h3>Zonas de Cobertura</h3>
                 <p>Nuestra red logística se expande constantemente para llevar el sabor de Chocolate Super a más
-                    rincones de El Salvador.
-                </p>
+                    rincones de El Salvador.</p>
                 <ul class="zonas-lista">
                     <li>San Salvador</li>
                     <li>Santa Ana</li>
@@ -303,10 +446,30 @@
 
     <!-- Contacto -->
     <section class="contacto reveal" id="contacto">
-
         <div class="container">
+            <span class="section-eyebrow">Hablemos</span>
             <h2 class="section-title">Contáctanos</h2>
             <p class="section-subtitle">Estamos listos para atender sus pedidos y consultas comerciales.</p>
+
+            <!-- Accesos rápidos -->
+            <div class="contacto-quick">
+                <a href="https://wa.me/50379239695?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20Chocolate%20Super"
+                    class="quick-card quick-wa" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" /></svg>
+                    <div>
+                        <strong>Escríbenos por WhatsApp</strong>
+                        <span>Respuesta rápida · 7562-1675</span>
+                    </div>
+                </a>
+                <a href="mailto:ventas.chocolatesuper@gmail.com?subject=Consulta%20Chocolate%20Super"
+                    class="quick-card quick-mail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <div>
+                        <strong>Envíanos un Correo</strong>
+                        <span>ventas.chocolatesuper@gmail.com</span>
+                    </div>
+                </a>
+            </div>
 
             <div class="contacto-grid">
                 <div class="contacto-info">
@@ -335,7 +498,7 @@
                         </div>
                         <div>
                             <h4>Teléfono</h4>
-                            <p>7562-1675 / 7238-2985</p>
+                            <p><a href="tel:+50375621675">7562-1675</a> / <a href="tel:+50372382985">7238-2985</a></p>
                         </div>
                     </div>
 
@@ -350,7 +513,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>ventas.chocolatesuper@gmail.com</p>
+                            <p><a href="mailto:ventas.chocolatesuper@gmail.com">ventas.chocolatesuper@gmail.com</a></p>
                         </div>
                     </div>
 
@@ -364,35 +527,50 @@
                         </div>
                         <div>
                             <h4>WhatsApp</h4>
-                            <p>7562-1675 / 7238-2985</p>
+                            <p><a href="https://wa.me/50375621675" target="_blank" rel="noopener">7562-1675</a> / <a href="https://wa.me/50372382985" target="_blank" rel="noopener">7238-2985</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 8:00 am - 5:00 pm<br>Sábados: 8:00 am - 3:00 pm</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="contacto-form">
                     <h3>Envíanos un Mensaje</h3>
+                    <p class="form-intro">Cuéntanos qué necesitas y te responderemos lo antes posible.</p>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono">
+                            <input type="tel" id="telefono" name="telefono" placeholder="0000-0000">
                         </div>
 
                         <div class="form-group">
                             <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta o pedido aquí..." required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
@@ -405,7 +583,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>CHOCOLATE SUPER</h3>
-                    <p>100% Salvadoreño</p>
+                    <p class="footer-tag">100% Salvadoreño</p>
                     <p>Desde 1997, impulsando el auténtico sabor y la tradición del chocolate artesanal salvadoreño con
                         excelencia y calidad para hogares y negocios.</p>
                 </div>
@@ -416,6 +594,7 @@
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#quienes-somos">Quiénes Somos</a></li>
                         <li><a href="#productos">Productos</a></li>
+                        <li><a href="#distribucion">Distribución</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
@@ -423,22 +602,36 @@
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <p>San Pablo Tacachico, La Libertad</p>
-                    <p>Tel: 7562-1675 / 7238-2985 </p>
-                    <p>Email: ventas.chocolatesuper@gmail.com
-                    </p>
+                    <p>Tel: 7562-1675 / 7238-2985</p>
+                    <p>ventas.chocolatesuper@gmail.com</p>
                 </div>
 
                 <div class="footer-section">
                     <h4>Horarios</h4>
                     <p>Lunes - Viernes: 8:00 am - 5:00 pm</p>
-                    <p>Sábados: 8:00 am - 15:00 pm</p>
-
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Chocolate Super. Todos los derechos reservados.</p>
+                    <p>Sábados: 8:00 am - 3:00 pm</p>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chocolate Super. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50379239695?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20Chocolate%20Super"
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.029a11.9 11.9 0 001.597 5.848L0 24l6.335-1.659a11.75 11.75 0 005.71 1.483h.005c6.635 0 12.032-5.391 12.035-12.029a11.95 11.95 0 00-3.417-8.591" />
+        </svg>
+    </a>
+
+    <!-- Botón volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
     <!-- Modal para Zoom de Imágenes -->
     <div id="imageModal" class="modal">

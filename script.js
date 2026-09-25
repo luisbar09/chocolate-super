@@ -4,8 +4,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
+    initScrollProgress();
+    initBackToTop();
     initRevealAnimations();
     initSmoothScroll();
+    initProductFilters();
     initContactForm();
     initMobileMenu();
     initImageZoom();
@@ -24,6 +27,75 @@ function initNavbar() {
         } else {
             navbar.classList.remove('scrolled');
         }
+    });
+}
+
+/* ====================================
+   BARRA DE PROGRESO DE SCROLL
+   ==================================== */
+function initScrollProgress() {
+    const progressBar = document.getElementById('scrollProgress');
+    if (!progressBar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${percent}%`;
+    });
+}
+
+/* ====================================
+   BOTÓN VOLVER ARRIBA
+   ==================================== */
+function initBackToTop() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+/* ====================================
+   FILTROS DE PRODUCTOS
+   ==================================== */
+function initProductFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.producto-card');
+    if (!filterBtns.length || !cards.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Estado activo del botón
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const matches = filter === 'all' || category === filter;
+
+                if (matches) {
+                    card.classList.remove('hide');
+                    // Reiniciar animación de entrada
+                    card.classList.remove('filtering');
+                    void card.offsetWidth; // fuerza reflow para reiniciar la animación
+                    card.classList.add('filtering');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+        });
     });
 }
 
